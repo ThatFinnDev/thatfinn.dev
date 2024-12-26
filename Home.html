@@ -1,0 +1,41 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+title: ThatFinn
+permalink: /
+---
+<style>
+.round-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+</style>
+<script>
+window.onload = function onLoad() {
+  correctViewS()
+}
+window.onresize = function onresize() {
+  correctViewS()
+}
+function correctViewS()
+{
+  if(window.innerWidth<700)
+  {
+    var palmonlys = document.getElementsByClassName("palm-only")
+    for(let element of palmonlys) { removeClass(element,"gone") };
+    var laptoponly = document.getElementsByClassName("laptop-only")
+    for(let element of laptoponly) { addClass(element,"gone") };
+  }
+  else
+  {
+    var palmonlys = document.getElementsByClassName("palm-only")
+    for(let element of palmonlys) { addClass(element,"gone")};
+    var laptoponly = document.getElementsByClassName("laptop-only")
+    for(let element of laptoponly) { removeClass(element,"gone")};
+  }
+}
+</script>
