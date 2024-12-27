@@ -1,6 +1,14 @@
 /**
  * Site header
  */
+.remove-text-color {
+  color: $text-color !important;
+}
+
+.project-image {
+  padding-bottom: 6px;
+  height:30px
+}
  .project
  {
   background-color: darken($grey-color,35%);
@@ -27,7 +35,10 @@
   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
   background-size: 200% 100%;
   animation: slide-rainbow 3s linear infinite;
-  position: relative;
+  z-index: 5; 
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 @keyframes slide-rainbow {
@@ -43,10 +54,6 @@
     background-position: 0% 0;
     background-position-y: bottom;
   }
-}
-.responsive-space {
-  width: 100%;
-  height: 580px
 }
 
 .max-width {
